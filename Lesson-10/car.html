@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>car</title>
+		<style type="text/css">
+			@keyframes car{
+				/*左下角,车头向右*/
+				0%{
+					transform: translateX(0);
+				}
+				/*右下角,车头向右*/
+				25%{
+					transform: translateX(885px);
+				}
+				/*右下角,车头向上*/
+				30%{
+					transform: translateX(900px) translateY(-20px) rotateZ(-90deg);
+				}
+				/*右上角,车头向上*/
+				45%{
+					transform: translateX(900px) translateY(-434px) rotateZ(-90deg);
+				}
+				/*右上角,车头向左*/
+				50%{
+					transform: translateX(880px) translateY(-454px) rotateZ(-180deg);
+				}
+				/*左上角，车头向左*/
+				75%{
+					transform: translateX(0px) translateY(-454px) rotateZ(-180deg);
+				}
+				/*左下角,车头向下*/
+				80%{
+					transform: translateX(-15px) translateY(-434px) rotateZ(-270deg);
+				}
+				/*左下角,车头向下*/
+				95%{
+					transform: translateX(-15px) translateY(-20px) rotateZ(-270deg);
+				}
+				/*左下角,车头向右*/
+				100%{
+					transform: translateX(0px) translateY(0px) rotateZ(-360deg);
+				}
+				
+			}
+			.box{
+				width: 960px;
+				height: 496px;
+				background: url(img/bg.png);
+				background-size: 100% 100%;
+				margin: 10px auto;
+				position: relative;
+				
+			}
+			.box img{
+				width: 75px;
+				height: 42px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				animation: car 10s linear forwards infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/car.png"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<style type="text/css">
+			@keyframes mov{
+				0%{
+					/*第一张图*/
+					transform: translateX(0);
+				}
+				20%{
+					/*第一张图*/
+					transform: translateX(0);
+				}
+				25%{
+					/*第一张图向第二张图移动*/
+					transform: translateX(-500px);
+				}
+				45%{
+					/*第二张图*/
+					transform: translateX(-500px);
+				}
+				50%{
+					/*第二张图向第三张图移动*/
+					transform: translateX(-1000px);
+				}
+				70%{
+					/*第三张图*/
+					transform: translateX(-1000px);
+				}
+				75%{
+					/*第三张图向第四张图移动*/
+					transform: translateX(-1500px);
+				}
+				95%{
+					/*第四张图*/
+					transform: translateX(-1500px);
+				}
+				100%{
+					/*第四张图向第一张图移动*/
+					transform: translateX(-2000px);
+					
+				}
+			}
+			.wrap{
+				width: 500px;
+				border: 10px solid green;
+				margin: 10px auto;
+				overflow: hidden;
+			}
+			.box {
+				width: 2500px;
+				animation: mov 8s infinite linear;
+			}
+			.box::after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.box img {
+				width: 500px;
+				float: left;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<img src="img/14-2.jpg"/>
+				<img src="img/14-3.jpg"/>
+				<img src="img/15-1.jpg"/>
+				<img src="img/15-2.jpg"/>
+				<img src="img/14-2.jpg"/>
+			</div>
+		</div>
+	</body>
+
+</html>
